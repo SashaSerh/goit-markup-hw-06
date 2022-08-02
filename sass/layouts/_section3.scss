@@ -1,4 +1,6 @@
 .benefits-list {
+  gap: 30px;
+
   &__thumb-h3 {
     position: relative;
   }
@@ -13,14 +15,6 @@
     text-transform: uppercase;
 
     color: #ffffff;
-  }
-
-  &__img-s3 {
-    margin-right: 30px;
-  }
-
-  &__img-s3:last-child {
-    margin: 0;
   }
 }
 
@@ -38,12 +32,19 @@
 }
 
 .table-of-contents-h2 {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 0.84;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-text-color-b);
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }

@@ -2,18 +2,30 @@
   padding-top: 24px;
   padding-bottom: 25px;
   margin-right: 95px;
+
   font-family: var(--sekondary-font), sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  color: var(--primary-text-color);
-
   letter-spacing: 0.03em;
 
-  color: var(--main-text-color-b);
+  color: var(--primary-text-color);
 
   &__style-color {
     color: var(--accent-color);
+  }
+
+  @media screen and(max-width: 767px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    font-family: var(--sekondary-font), sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: var(--primary-text-color);
+
+    letter-spacing: 0.03em;
   }
 }
 
@@ -49,6 +61,24 @@
   border-bottom: 1px solid #ececec;
 }
 
+.navigation {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+}
+
 .current {
   color: var(--hover-btn-color);
 
@@ -65,6 +95,30 @@
   }
 }
 
+@include mq(mobile-only) {
+  .current::after {
+    background-color: transparent;
+  }
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  list-style: none;
+  padding: 0;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  @media screen and(min-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
 .contacts__mail-link-header {
   font-style: normal;
   font-weight: 500;
@@ -84,6 +138,11 @@
   &:focus .contacts__icon {
     fill: var(--accent-color);
   }
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 10px;
+    display: flex;
+  }
 }
 
 .contacts__box {
@@ -94,6 +153,10 @@
   margin-right: 50px;
 
   &:last-child {
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: 1199px) {
     margin-right: 0;
   }
 }
@@ -116,6 +179,11 @@
   &:hover .contacts__icon,
   &:focus .contacts__icon {
     fill: var(--accent-color);
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin-right: 19px;
+    display: flex;
   }
 }
 

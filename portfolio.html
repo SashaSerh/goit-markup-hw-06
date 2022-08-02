@@ -47,6 +47,80 @@
           </ul>
         </nav>
 
+        <!-- ==============header-mobile=================== -->
+        <div class="header-mobile">
+          <a class="logo link" lang="en" href="index.html"
+            ><span class="logo__style-color">Web</span>Studio</a
+          >
+          <button
+            class="header-mobile__button"
+            type="button"
+            aria-label="button"
+            data-menu-button
+          >
+            <svg class="mobile-menu-icon" width="24" height="24">
+              <use
+                class="mobile-menu-burger"
+                href="./img/sprite.svg#burger-menu"
+              ></use>
+              <use
+                class="mobile-menu-close"
+                href="./img/sprite.svg#close-burger"
+              ></use>
+            </svg>
+          </button>
+          <!-- ===================mobile-menu-modal================= -->
+          <div class="mobile-menu" data-menu>
+            <ul class="mobile-menu__nav list-reset">
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__item-link link" href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="mobile-menu__item">
+                <a
+                  class="mobile-menu__item-link link current"
+                  href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__item-link link" href="#">Контакты</a>
+              </li>
+            </ul>
+            <ul class="mobile-menu__contacts list-reset">
+              <li class="mobile-menu__contacts-item">
+                <a class="mobile-menu__link-tel link" href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-menu__contacts-item">
+                <a
+                  class="mobile-menu__link-mail link"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-menu__socials list-reset">
+              <li class="mobile-menu__socials-item">
+                <a class="mobile-menu__socials-link link" href="#">Instagram</a>
+              </li>
+              <li class="mobile-menu__socials-item">
+                <a class="mobile-menu__socials-link link" href="#">Twitter</a>
+              </li>
+              <li class="mobile-menu__socials-item">
+                <a class="mobile-menu__socials-link link" href="#">Facebook</a>
+              </li>
+              <li class="mobile-menu__socials-item">
+                <a class="mobile-menu__socials-link link" href="#">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+          <!-- ===================//mobile-menu-modal================= -->
+        </div>
+        <!-- ==============//header-mobile=================== -->
+
         <ul class="contacts list">
           <li class="contacts__box">
             <a
@@ -70,7 +144,7 @@
         </ul>
       </div>
     </header>
-    <!-- ================heder============== -->
+    <!-- ================/heder============== -->
     <!-- =============hero============== -->
 
     <main>
@@ -100,16 +174,50 @@
             </li>
           </ul>
           <!-- ==========buttons=========== -->
+
           <ul class="card-set list-portfolio">
-            <li class="item">
-              <a class="link-prtf" href="#">
+            <li class="list-portfolio__item card-set__item">
+              <a class="list-portfolio__link" href="#">
                 <div class="imgcard-prtf">
-                  <img
-                    src="./portfolio-img/img.jpg"
-                    alt="ноутбук"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img__desk.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img__desk@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- ===================картинка для десктопа================= -->
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img__tab.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img__tab@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- ===================картинка для таблетки================= -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img__mob.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img__mob@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                      loading="lazy"
+                    />
+                    <!-- ===================картинка для мобилки================= -->
+                    <img
+                      src=" ./img/portfolio-img/portfolio-img__mob.jpeg"
+                      alt="ноутбук"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                    <!-- ===================дефолтное изоб. мобилка================= -->
+                  </picture>
 
                   <p class="paragraph-card">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -127,15 +235,49 @@
               </a>
             </li>
 
-            <li class="item">
-              <a class="link-prtf" href="#">
+            <li class="list-portfolio__item card-set__item">
+              <a class="list-portfolio__link" href="#">
                 <div class="imgcard-prtf">
-                  <img
-                    src="./portfolio-img/img(1).jpg"
-                    alt="два баскетболиста"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img1__desk.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img1__desk@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- ===================картинка для десктопа================= -->
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img1__tab.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img1__tab@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- ===================картинка для таблетки================= -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img1__mob.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img1__mob@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                      loading="lazy"
+                    />
+                    <!-- ===================картинка для мобилки================= -->
+                    <img
+                      src=" ./img/portfolio-img/portfolio-img1__mob.jpeg"
+                      alt="два баскетболиста"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                    <!-- ===================дефолтное изоб. мобилка================= -->
+                  </picture>
+
                   <p class="paragraph-card">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -153,15 +295,49 @@
               </a>
             </li>
 
-            <li class="item">
-              <a class="link-prtf" href="#">
+            <li class="list-portfolio__item card-set__item">
+              <a class="list-portfolio__link" href="#">
                 <div class="imgcard-prtf">
-                  <img
-                    src="./portfolio-img/img(2).jpg"
-                    alt="ресторан Seafood"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img2__desk.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img2__desk@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- ===================картинка для десктопа================= -->
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img2__tab.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img2__tab@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- ===================картинка для таблетки================= -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img2__mob.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img2__mob@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                      loading="lazy"
+                    />
+                    <!-- ===================картинка для мобилки================= -->
+                    <img
+                      src=" ./img/portfolio-img/portfolio-img2__mob.jpeg"
+                      alt="ресторан"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                    <!-- ===================дефолтное изоб. мобилка================= -->
+                  </picture>
+
                   <p class="paragraph-card">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -179,15 +355,49 @@
               </a>
             </li>
 
-            <li class="item">
-              <a class="link-prtf" href="#">
+            <li class="list-portfolio__item card-set__item">
+              <a class="list-portfolio__link" href="#">
                 <div class="imgcard-prtf">
-                  <img
-                    src="./portfolio-img/img(3).jpg"
-                    alt="наушники"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img3__desk.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img3__desk@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- ===================картинка для десктопа================= -->
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img3__tab.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img3__tab@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- ===================картинка для таблетки================= -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img3__mob.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img3__mob@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                      loading="lazy"
+                    />
+                    <!-- ===================картинка для мобилки================= -->
+                    <img
+                      src=" ./img/portfolio-img/portfolio-img3__mob.jpeg"
+                      alt="наушники"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                    <!-- ===================дефолтное изоб. мобилка================= -->
+                  </picture>
+
                   <p class="paragraph-card">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -205,15 +415,49 @@
               </a>
             </li>
 
-            <li class="item">
-              <a class="link-prtf" href="#">
+            <li class="list-portfolio__item card-set__item">
+              <a class="list-portfolio__link" href="#">
                 <div class="imgcard-prtf">
-                  <img
-                    src="./portfolio-img/img(4).jpg"
-                    alt="две коробки"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img4__desk.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img4__desk@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- ===================картинка для десктопа================= -->
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img4__tab.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img4__tab@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- ===================картинка для таблетки================= -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img4__mob.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img4__mob@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                      loading="lazy"
+                    />
+                    <!-- ===================картинка для мобилки================= -->
+                    <img
+                      src=" ./img/portfolio-img/portfolio-img4__mob.jpeg"
+                      alt="две коробки"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                    <!-- ===================дефолтное изоб. мобилка================= -->
+                  </picture>
+
                   <p class="paragraph-card">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -231,15 +475,49 @@
               </a>
             </li>
 
-            <li class="item">
-              <a class="link-prtf" href="#">
+            <li class="list-portfolio__item card-set__item">
+              <a class="list-portfolio__link" href="#">
                 <div class="imgcard-prtf">
-                  <img
-                    src="./portfolio-img/img(5).jpg"
-                    alt="персональный компьютер"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img5__desk.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img5__desk@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- ===================картинка для десктопа================= -->
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img5__tab.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img5__tab@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- ===================картинка для таблетки================= -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img5__mob.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img5__mob@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                      loading="lazy"
+                    />
+                    <!-- ===================картинка для мобилки================= -->
+                    <img
+                      src=" ./img/portfolio-img/portfolio-img5__mob.jpeg"
+                      alt="пк"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                    <!-- ===================дефолтное изоб. мобилка================= -->
+                  </picture>
+
                   <p class="paragraph-card">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -257,15 +535,49 @@
               </a>
             </li>
 
-            <li class="item">
-              <a class="link-prtf" href="#">
+            <li class="list-portfolio__item card-set__item">
+              <a class="list-portfolio__link" href="#">
                 <div class="imgcard-prtf">
-                  <img
-                    src="./portfolio-img/img(6).jpg"
-                    alt="журнал"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img6__desk.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img6__desk@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- ===================картинка для десктопа================= -->
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img6__tab.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img6__tab@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- ===================картинка для таблетки================= -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img6__mob.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img6__mob@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                      loading="lazy"
+                    />
+                    <!-- ===================картинка для мобилки================= -->
+                    <img
+                      src=" ./img/portfolio-img/portfolio-img6__mob.jpeg"
+                      alt="журнал"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                    <!-- ===================дефолтное изоб. мобилка================= -->
+                  </picture>
+
                   <p class="paragraph-card">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -283,15 +595,49 @@
               </a>
             </li>
 
-            <li class="item">
-              <a class="link-prtf" href="#">
+            <li class="list-portfolio__item card-set__item">
+              <a class="list-portfolio__link" href="#">
                 <div class="imgcard-prtf">
-                  <img
-                    src="./portfolio-img/img(7).jpg"
-                    alt="проэкт"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img7__desk.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img7__desk@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- ===================картинка для десктопа================= -->
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img7__tab.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img7__tab@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- ===================картинка для таблетки================= -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img7__mob.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img7__mob@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                      loading="lazy"
+                    />
+                    <!-- ===================картинка для мобилки================= -->
+                    <img
+                      src=" ./img/portfolio-img/portfolio-img7__mob.jpeg"
+                      alt="проэкт"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                    <!-- ===================дефолтное изоб. мобилка================= -->
+                  </picture>
+
                   <p class="paragraph-card">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -309,15 +655,49 @@
               </a>
             </li>
 
-            <li class="item">
-              <a class="link-prtf" href="#">
+            <li class="list-portfolio__item card-set__item">
+              <a class="list-portfolio__link" href="#">
                 <div class="imgcard-prtf">
-                  <img
-                    src="./portfolio-img/img(8).jpg"
-                    alt="макбук"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img8__desk.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img8__desk@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- ===================картинка для десктопа================= -->
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img8__tab.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img8__tab@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- ===================картинка для таблетки================= -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./img/portfolio-img/portfolio-img8__mob.jpeg    1x,
+                        ./img/portfolio-img/portfolio-img8__mob@2x.jpeg 2x
+                      "
+                      type="image/jpg"
+                      loading="lazy"
+                    />
+                    <!-- ===================картинка для мобилки================= -->
+                    <img
+                      src=" ./img/portfolio-img/portfolio-img8__mob.jpeg"
+                      alt="макбук"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                    <!-- ===================дефолтное изоб. мобилка================= -->
+                  </picture>
+
                   <p class="paragraph-card">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -466,3 +846,7 @@
   </body>
 </html>
 <!-- =================footer================== -->
+
+<!-- ================js==================== -->
+<script src="./js/mobile-menu.js"></script>
+<!-- ================/js==================== -->
